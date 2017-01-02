@@ -1,3 +1,23 @@
 <h1>Your Followers</h1>
 
-<%= @user_data.first['username'] %>
+<ul>
+	<% @followers_data.each do |user| %>
+		<li><%= user['username'] %></li>
+	<% end %>
+</ul>
+
+<h1>Your Follows</h1>
+
+<ul>
+	<% @following_data.each do |user| %>
+		<li><%= user['username'] %></li>
+	<% end %>
+</ul>
+
+<h1>People you follow that don't follow you back</h1>
+
+<ul>
+	<% @users_not_following_back.each do |user| %>
+		<li><%= user['username'] %></li>
+	<% end %>
+</ul>
