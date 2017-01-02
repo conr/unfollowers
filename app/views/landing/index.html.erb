@@ -1,1 +1,1 @@
-<%= link_to 'Login with Instagram', Instagram.authorize_url(redirect_uri: ENV['REDIRECT_URI'], scope: "likes relationships basic") %>
+<%= link_to 'Login with Instagram', Instagram.authorize_url(redirect_uri: ENV['REDIRECT_URI'], scope: "likes relationships basic public_content follower_list comments") %>
